@@ -1,0 +1,126 @@
+
+<body>
+    <link rel="stylesheet" href="workers.css">
+    <div class="navbar">
+        <div class="navbar-container">
+            <h2  class="navbar-logo"  id="logo">CAMER<span>SITE</span> </h2> 
+           <img class="menu-logo" id="menuCta"   src="https://www.svgrepo.com/show/65828/menu-bars.svg" alt="menu">
+           <nav>
+               <img  class="exit-btn" id="exitCta" src="https://img.icons8.com/ios-glyphs/344/cancel.png"    alt="exit menu">
+           <ul class="navbar-menu">
+               <li><a href="../app/marketing.html">Marketing</a></li>
+               <li><a href="../app/worker.html">Workers</a></li>
+               <li><a href="../app/project.html">Projects</a></li>
+           </ul>
+           </nav>
+        </div>
+    </div>
+    <br>
+     <br>
+     
+    
+     <section class="workers">
+      <div class="container">
+      <h3>WORKERS</h3> <img class="workerImg" src="https://cdn-icons-png.flaticon.com/128/1256/1256650.png" alt="">
+      <P> Here you can find workers of various professions to solve your daily problems.
+          You could also create your Worker profile so someone could contact you for a job,
+          <span> Registration costs <strong>500frsCFA</strong> per month to the  mobile money account number 
+               </span> <strong>: 697965198...</strong><a class="create" href="#worker">  to create page</a></P>  
+      </div>
+      <hr>
+      <form action="">
+        <input type="search" (ngModelChange)="searchWorker(key.value)" #key="ngModel" ngModel  name="key" id="searchName" class="nameSearch" placeholder=" find by profession/name/town..."><img class="searchIcon" src="https://t3.ftcdn.net/jpg/00/83/10/90/240_F_83109078_BOS0Wxe3v1slxIprmr3VK6HDBBrnsArt.jpg" alt="">
+       
+      </form>
+      <div *ngIf="workers?.length==0" class="noEmployee">
+        <div class="alerter" role="alert">
+          <h4>No Worker with that profession found!!!</h4>
+      </div>
+    </div>
+      <section class="cards" id="main-section">
+      <div *ngFor="let worker of workers" class="container1">
+        <div class="row">
+          <div class="column1">
+            <div class="card-part1">
+              <div class="card-body-row">
+                <div class="card-body-column1">
+                  <img class="rounded-image"  src="{{worker?.imageUrl}}" alt=""><p class="worker-name">{{worker?.name}}</p>
+                </div>
+              </div>
+              <ul class="worker-attributes">
+                <li class="attributes"><i></i>Profession: <span class="spann">{{worker?.profession}}</span></li>
+                <li class="attributes"><i></i>Speciality: <span class="spann">{{worker?.description}}</span></li>
+               <li class="tel"><i></i>Tel: <span class="spann">{{worker?.phone}}</span></li>
+               <li class="attributes"><i></i>Town: <span class="spann">{{worker?.city}}</span></li>
+              </ul>
+              <div class="card-bottom-worker">
+                <div class="buttons">
+                  <a class="delete-button"  id="deleteWorker" data-placement="top" role="dialog" data-original-title="Delete" href=""><img class="deleteLogo"  src="https://cdn-icons.flaticon.com/png/128/2874/premium/2874821.png?token=exp=1645053710~hmac=6195b8522a7fed6455eceac326bce203" alt=""></a>
+                  <a class="edit-button" id="editWorker"  data-placement="top" role="dialog" data-original-title="Edit" href=""><img class="editLogo" src="https://cdn-icons-png.flaticon.com/128/1001/1001371.png" alt=""></a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+    
+  </section>
+  <hr>
+  <section class="work" id="worker">
+      <div class="container">
+          <h2>CREATE A WORKER PROFILE (creer un profil travaileur)</h2>
+              <form #createForm="ngForm" (ngSubmit)="onCreateWorker(createForm)">
+                  <label for="name"> Names : (<span>Noms</span>)</label>
+                  <input type="text" id="name" ngModel name="name" placeholder=" max 3 names...">
+                  <label for="city"> City, Quarter : (<span>ville, Quartier</span>) </label>
+                  <input type="text" id="city" ngModel name="city" placeholder=" enter city and or quarter..">
+                  <label for="profession"> Profession : </label>
+                  <input type="text" id="profession" ngModel   name="profession" placeholder=" profession...">
+                  <label for="phone"> Phone : (<span>tel</span>)</label>
+                  <input type="tel" id="phone" ngModel name="phone">
+                  <label for="description"> Specialty : (<span>specialite</span>)</label>
+                  <input type="text" id="description" ngModel name="description">
+                  <label for="imageUrl"> Image : (<span>photo</span>)</label>
+                  <input  type="url" id="imageUrl" ngModel name="imageUrl" >
+                  <label for="workerPassword"> Password : (<span>for deleting or editing</span>)</label>
+                  <input  type="password" id="workerPassword" ngModel name="workerPassword" >
+                  <div class="postBtn">
+                    <button [disabled]="createForm.invalid" type="submit"  class="submit-workcomment" >create</button>
+                    <button class="submit-workcomment" type="reset" >reset</button>
+                </div>
+              </form>
+          </div>
+          <div class="contact-right">
+              <h3>Find <span>zone</span> :  (trouver <span> l'endroit</span>)</h3> 
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15923.380644645886!2d11.499670056554136!3d3.84339644704202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcf7a309a7977%3A0x7f54bad35e693c51!2sJaunde%2C%20Kamerun!5e0!3m2!1sde!2sde!4v1644882446916!5m2!1sde!2sde"   width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+  </section>
+
+<!--password for  deleting -->
+<div  class="modal fade" id="passwordModal" tabindex="-1" role="dialog " aria-labelledby="updateProduct" aria-hidden="true">
+  <div  class="modal-dialog" role="document" style="background-color: gainsboro; margin-top: 3em; height: 10em;">
+    <div class="modal-content">
+      <div class="modal-header">
+  <button  type="button" class="closeDelete" data-dismiss="modal" aria-label="close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+      </div> 
+  <div class="modal-body">
+    <form #submitPassword="ngForm"  (ngSubmit)="checkPassword(submitPassword.value)">
+      <div class="form-group">
+  <label for="password"> Enter Password to update or delete:</label>
+  <input type="hidden" id="id" ngModel="{{ passwordCheck?.id}}" name="id">
+  <input type="number"  style="margin: auto auto -1em .8em ;border: none; box-shadow: 0 .0 .4rem 0 black; border-radius: 4px;">
+  <input type="hidden" id="ipAddress" ngModel="{{ passwordCheck?.ipAddress}}" name="ipAddress">
+  <input  style="margin-left: .5em;"  type="submit" class="updateCheck" value="check">
+      </div>
+  </form> 
+  </div> 
+</div>
+</div>
+</div>
+
+
+</body>

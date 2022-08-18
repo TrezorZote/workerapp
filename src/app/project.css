@@ -1,0 +1,452 @@
+
+:root {
+  --primary-color: black;
+}
+
+
+body {
+  background-color: white;
+  font-family: 'Trebuchet MS';
+}
+
+.navbar {
+  position: relative;
+  background-position: 80% 15%;
+  background-image: url("https://media.istockphoto.com/illustrations/soft-cloudy-is-gradient-pastelabstract-sky-background-in-sweet-color-illustration-id1057904560?k=20&m=1057904560&s=612x612&w=0&h=m1Vp8C3lk9Lmh6gvM0z0TDsCY5qkMKIwUS51-e-Z4MU=");
+  box-shadow: 0 .2em .5em 0 black;
+  width: 100%;
+}
+
+.navbar .navbar-logo {
+  margin-left: .5em;
+  font-weight: bold;
+  color: #070707;
+  text-decoration: none;
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 21px;
+  margin-top: .5em;
+}
+
+.navbar .navbar-logo span {
+  color: orangered;
+  font-weight: bold;
+}
+
+.navbar .navbar-logo span.navbar-logo::before {
+  position: absolute;
+  width: 2em;
+  background-color: black;
+  height: .4em;
+  bottom: 0;
+}
+
+.navbar .navbar-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+  height: 3em;
+
+}
+
+.menu-logo {
+  width: 1.4em;
+  height: 1.4em;
+  margin-top: .8em;
+  cursor: pointer;
+ float: right;
+ margin-right: .5em;
+}
+
+nav {
+  position: fixed;
+  z-index: 989;
+  width: 8.5em;
+  right: 0;
+  top: .4em;
+  background-image: url("https://media.istockphoto.com/illustrations/soft-cloudy-is-gradient-pastelabstract-sky-background-in-sweet-color-illustration-id1057904560?k=20&m=1057904560&s=612x612&w=0&h=m1Vp8C3lk9Lmh6gvM0z0TDsCY5qkMKIwUS51-e-Z4MU=");
+  background-position: 80% 50%;
+
+  height: 10em;
+  padding: 1em;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+}
+
+nav .exit-btn {
+  margin-top: -.3em;
+  width: 1.7em;
+  height: 1.6em;
+  cursor: pointer;
+  float: right;
+  margin-right: .3em;
+}
+
+nav .navbar-menu {
+  margin-top: 3em;
+  text-align: center;
+  font-weight: bold;
+  margin-right: .5em;
+}
+
+nav .navbar-menu li {
+  list-style-type: none;
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: .5em;
+  cursor: pointer;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+  text-align: center;
+  font-weight: bold;
+  margin-top: 0;
+  font-size: .9em;
+}
+
+nav .navbar-menu li:hover {
+  border-bottom: 3px solid orangered;
+}
+
+nav .navbar-menu .working {
+  color: orangered;
+  border-bottom: 3px solid orangered;
+}
+
+nav .navbar-menu .working:hover {
+  color: black;
+}
+
+nav .navbar-menu a {
+  text-decoration: none;
+  color: black;
+}
+
+section.workers {
+  background: white;
+  box-shadow: 0 0 .5rem 0 black;
+  margin: 3em auto 2.5em 0;
+  padding: 1em;
+
+}
+
+section.workers h3 {
+  padding: 0.2em;
+  color:black;
+  font-family: 'Trebuchet MS';
+  font-weight: bold;
+  margin-top: -2.4em;
+  margin-left: -.9em;
+}
+.workerImg{
+  width: 2.5em;
+  height: 2.5em;
+  margin-left: .25em;
+}
+
+section.workers p span {
+  color: orangered;
+  font-weight: bold;
+  font-family: 'Trebuchet MS';
+}
+
+  .create {
+      background: none;
+    color: orangered;
+    font-weight: bold;
+   font-size: .9em;
+   text-decoration: underline 2px solid  orangered;
+  }
+  .create:hover{
+    background: none;
+  color: black;
+  font-weight: bold;
+ font-size: .9em;
+ text-decoration: underline 2px solid black;
+ 
+}
+
+
+
+
+ nav.open-nav{
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+
+nav.open-navigator{
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+
+nav.open-navEvent{
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+
+section.projects {
+  background: white;
+  margin: 3em auto 2.5em 0;
+  padding: 1em;
+  box-shadow: 0 0 .5rem 0 black;;
+  font-family: 'Trebuchet MS';
+}
+
+section.projects h3 {
+  margin-top: -2.4em;
+  margin-left: -.8em;
+  border-radius: 8px;
+  padding: 0.2em;
+  color: black;
+  font-family: 'Trebuchet MS';
+  font-weight: bold;
+}
+
+.eve {
+  margin-top: 0;
+  margin-left: 0;
+     width: 2.3em;
+     height: 2.3em;
+}
+
+.ideas{
+    width: 2em;
+    height: 2em;
+    margin-left: .7em;
+    margin-top: -.6em;
+}
+
+section.projects p span {
+  color: orangered;
+  font-weight: bold;
+  font-family: 'Trebuchet MS';
+}
+
+
+ textarea .textt  {
+  border: none;
+  border-radius: 8px;
+  box-shadow:  0 0 .3rem 0 black;
+
+
+}
+
+
+section.project {
+  background: white;
+  box-shadow: 0 0 .5rem 0 black;
+  margin: 3em auto 2.5em 0;
+  padding: 1em;
+}
+
+section.project h3.share {
+  padding-left: .5em;
+  margin-top: 0;
+  margin-bottom: 1em;
+  color: orangered;
+  font-family: 'Trebuchet MS';
+  margin-left: -.5em;
+}
+
+section.project label {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: .5em;
+  font-weight: bold;
+  color: black;
+  font-family: 'Trebuchet MS';
+}
+
+section.project label span {
+  color: orangered;
+}
+
+section.project input{
+  
+    margin-bottom: .5em;
+    width: 18.5em;
+    height: 2em;
+    border: none;
+    box-shadow:  0 .2rem .4rem 0 black;
+   
+  
+}
+
+.submit-projectcomment {
+      display: block;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 .1rem .3rem 0 black;
+  width: 3.5em;
+  margin-top: 1em;
+  background-color: black;
+  border: none;
+}
+.postBtn{
+  display: grid;
+  grid-template-columns: 60px auto;
+ }
+ 
+
+ .submit-projectcomment:hover {
+  background-color: white;
+  color: black;
+
+}
+
+section.project h3 {
+  margin-top: 2em;
+  font-family: 'Trebuchet MS';
+  color: orangered;
+  font-weight: bold;
+}
+
+section.project h3 span {
+  color: black;
+}
+
+section.project iframe {
+  width: 16.5em;
+  height: 15em;
+  margin-left: -.5em;
+}
+
+.nameSearch{
+  margin-top: 1em;
+  margin-bottom: 2.5em;
+  border-radius: 16px;
+  width: 16em;
+  height: 2.5em;
+  border: none;
+  box-shadow: 0 0 .4rem 0 black;
+  font-family: 'Trebuchet MS';
+}
+.searchIcon{
+  width: 1.8em;
+  height:1.8em;
+  margin-bottom: -.6em;
+  margin-left: -2em;
+  border-radius: 32px;
+ }
+
+.alerter h4{
+  font-family: 'Trebuchet MS';
+  color: rgb(255, 38, 0);
+}
+@media only screen and (min-width: 605px) {
+.event-cards{ 
+  display: grid;
+    grid-template-columns: 280px auto;
+}
+}
+@media only screen and (min-width: 885px) {
+.event-cards{ 
+    display: grid;
+      grid-template-columns:280px 280px auto;
+  }
+  
+}
+@media only screen and (min-width: 1172px) {
+    .event-cards{ 
+        display: grid;
+          grid-template-columns:280px 280px 280px auto;
+      }
+    }
+   
+
+
+
+
+
+.project-card-part1{
+border: none;
+box-shadow: 0 .3rem .4rem 0 black;
+width: 16em;
+height: 18.5em;
+background-color: whitesmoke;
+margin: .5em .5em 1em -.5em;
+
+}
+
+.card-bottom-project{
+ display: grid;
+ grid-template-columns: 150px auto; 
+  }
+
+.editProjectLogo{
+width:1.3em ;
+height: 1.3em;
+margin-right: -6.6em;
+float: right;
+margin-top: -1.85em;
+
+}
+.editProjectLogo:hover{
+width: 1.45em;
+height: 1.45em;
+}
+
+
+.deleteProjectLogo{
+width: 1.3em;
+height: 1.3em;
+float: right;
+margin-right: -4.7em;
+margin-top: -1.85em;
+
+
+
+}.deleteProjectLogo:hover{
+width: 1.45em;
+height: 1.45em;
+}
+
+
+
+.event-rounded-image{
+  object-fit: cover;
+   width: 15.7em;
+   height: 10.5em;
+   border:2px solid white;
+   margin-left: 0;
+   margin-top: 0;
+}
+
+
+
+.project-attributes{
+margin-left:-.4em;
+list-style-type:none ;
+margin-top: -.1em;
+
+}
+.pro-attributes {
+  list-style-type: none;
+  font-weight: bold;
+  font-size: .8em;
+  margin-left: -2em;
+  color:orangered;
+  font-family: 'Trebuchet MS';
+  text-transform: uppercase;
+  
+
+}
+.spannnn{
+  color:black;
+}
+@media only screen and (min-width: 880px) {
+ 
+  .map-right{
+    display: block;
+    float: right;
+    margin-top: -22em;
+    margin-right: 3em ;
+  }
+} 

@@ -1,0 +1,653 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@import'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Comforter+Brush&family=Monoton&family=Road+Rage&family=Style+Script&family=Vesper+Libre&display=swap');
+section.marketing {
+  background: white;
+  margin: 1em .05em 0 .2em;
+}
+
+section.marketing p  {
+  margin: 1.5em .2em auto .4em;
+  font-family: 'Poppins';
+  font-weight: 900;
+  font-size: 1.05em;
+}
+
+section.marketing p span {
+  color: rgb(226, 60, 0);
+  font-weight: 900;
+  font-family: 'Poppins';
+}
+
+.mark {
+  background: white;
+  margin: 3em auto 2.5em 0;
+  padding: 1em;
+  box-shadow: 0 0 .5rem 0 black;
+  width: 100%;
+}
+
+.mark h2 {
+  padding-left: .5em;
+  margin: -2.5em auto 1em -.5em;
+  color: orangered;
+  font-size: 1.3em;
+  font-family: 'Trebuchet MS';
+}
+.close {
+ font-size: 2.5em;
+ margin: -1.4em 0 auto auto;
+  cursor: pointer;
+}
+
+
+.mark label {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: var(--primary-color);
+  font-family: 'Poppins';
+}
+
+.mark label span {
+  color: rgb(201, 54, 0);
+}
+
+.mark input{
+  border-bottom: 1px solid black;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-bottom: 0;
+  width: 100%;
+  height: 2.5em;
+  font-family: 'Poppins';
+  font-size: 1em;
+  font-weight: bold;
+}
+.mark textarea {
+  border: none;
+  margin-bottom: .3em;
+  box-shadow: 0 .2rem .5rem 0 black;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  font-family: 'Poppins';
+  font-size: 1em;
+  font-weight: bold;
+}
+input[type="file"]{
+  display: none;
+}
+
+.chooseImage {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1em;
+  margin-bottom: .15em;
+  font-weight: bold;
+  font-family: 'Trebuchet MS',sans-serif;
+  align-items: center;
+  background-color: white;
+  width: 2.65em;
+  border: none;
+  box-shadow: 0 .1rem .2rem 0 black;
+  cursor: pointer;
+  justify-content: center;
+
+}
+.chooseImage:hover {
+ background-color: rgba(255, 108, 55, 0.741);
+}
+.material-icons{
+ margin-top: .25em;
+ }
+
+ .postBtn{
+  display: grid;
+  grid-template-columns: 150px auto;
+  }
+
+.submit {
+color: black;
+cursor: pointer;
+border-radius: 4px;
+box-shadow: 0 .2rem .4rem 0 black ;
+border: none;
+width: 4.5em;
+margin:1.5em 2.5em auto .5em ;
+background-color:white;
+font-weight: 600;
+height: 2em;
+
+}
+
+.resetAll {
+  color: black;
+  cursor: pointer;
+  border-radius: 4px;
+  box-shadow: 0 .2rem .4rem 0 black ;
+  border: none;
+  width: 4.5em;
+  margin:1.5em auto auto 2.5em ;
+  background-color:white;
+  font-weight: 600;
+  height:2em ;
+  }
+  
+.submit-itemcomment:hover {
+background-color: black;
+color: white;
+
+}
+
+section.contact-right h3 {
+  margin-top: -.5em;
+  margin-left: 2em;
+  font-family: 'Trebuchet MS';
+  color: black;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+section.contact-right h3 span {
+  color: orangered;
+}
+
+section.contact-right iframe {
+    width: 95%;
+    height: 18em;
+    margin-left: .25em;
+}
+.locationLogo{
+  width: 1.6em;
+  height: 1.6em;
+  margin-top: -4.5em;
+  margin-left: .5em;
+
+}
+
+.logoss{
+display: grid;
+grid-template-columns: 70px 70px 70px 70px 70px ;
+}
+.clothLogo{
+  width: 1.7em;
+  height: 1.7em;
+  margin-left: .3em;
+ margin-top: 2em;
+}
+
+.laptopSell{
+  width: 1.7em;
+  height: 1.7em;
+  margin-top: 2em;
+}
+
+.phoneSell{
+  width: 2em;
+  height: 2em;
+  margin-top: 2em;
+}
+
+.dressLogo{
+  width: 2em;
+  height: 2em;
+  margin-left: .3em;
+  margin-top: 2em;
+}
+.carLogo{
+  width: 2em;
+  height: 2em;
+  margin-top: 2em;
+}
+.phoneLogo{
+  width: 1.8em;
+  height: 1.8em;
+  margin-top: 2em;
+}
+.houseLogo{
+  width: 1.8em;
+  height: 1.8em;
+  
+  margin-top: 2em;
+}
+.laptopLogo{
+  width: 1.8em;
+  height: 1.8em;
+  margin-top: 2em;
+}
+
+
+.nameSearch{
+  margin: 1em auto 1em .4em;
+    border-radius: 10px;
+    width: 17.85em;
+    height: 2.75em;
+    border: none;
+    background-color: whitesmoke;
+    box-shadow: 0 0 .4rem 0 black;
+    font-family: 'Trebuchet MS';
+    font-size: 1.05em;
+    text-align: center;
+}
+
+.searchIcon{
+  width: 2.75em;
+  height:2.75em;
+  margin-bottom: .20em;
+  margin-left: -3em;
+  border-radius: 10px;
+ }
+.alerter{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.1em;
+    text-align: center;
+   margin-top: 1.4em;
+   color:rgb(201, 54, 0);
+}
+.item-card-part1{
+margin: .8em auto .4em .15em;
+ border: none;
+ box-shadow: 0 .3rem .4rem 0 black;
+ width: 98%;
+ height: 31em;
+display: inline-block;
+background-color: rgba(221, 59, 0, 0.938);
+}
+
+.item-rounded-image{
+  object-fit: contain;
+  width: 100%;
+   height: 15.5em;
+   margin: .25em .25em .5em 0;
+}
+
+
+.items-attributes {
+    list-style-type: none;
+   font-weight: 600;
+   font-size: .85em;
+    margin-left: -1.8em;
+    margin-top: .5em;
+    color:wheat;
+    font-family: 'Comfortaa';
+    letter-spacing: .07em;
+    
+}
+
+.spa{
+  font-family: 'Poppins';
+    color:black;
+  font-size: 1.05em;
+  font-weight: bolder;
+}
+
+.findTag:hover{
+  color:black ;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.deleteItemLogo{
+  width: 1.75em;
+  height: 1.7em;
+  float: right;
+  margin-top:-.35em ;
+  margin-right: .45em;
+  cursor: pointer;
+  z-index: 855;
+  background-color: wheat;
+  border-radius: 12px;
+  box-shadow: 0 .1rem .3rem 0 black;
+ 
+}.deleteItemLogo:hover{
+  width: 1.8em;
+  height: 1.8em;
+}
+
+.postBtn{
+ display: grid;
+ grid-template-columns: 60px auto;
+}
+
+.closeDelete{
+ float: right;
+font-size: 1.6em;
+ border: none;
+ background-color: rgba(191, 28, 28, 0.938);
+ margin: 0 .5em .5em auto;
+ cursor: pointer;
+ }
+
+ .pass label{
+   color:black;
+ display: block;
+ margin-left: .8em;
+ margin-bottom: .3em;
+  }
+  .pass{
+    margin-bottom: 1.5em;
+    margin-top: 1em;
+     }
+ 
+     .updateCheck {
+      display: block;
+    color: black;
+    cursor: pointer;
+    border-radius: 4px;
+    box-shadow: 0 .1rem .3rem 0 black ;
+    width: 4em;
+    margin-top: 1.5em;
+    background-color: white;
+    border: none;
+    margin-left: 1.5em;
+    }
+    .updateCheck:hover {
+    background-color: black;
+    color: white;
+    
+    }
+
+
+    .validate{
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      color: rgba(199, 0, 0, 0.884);
+      text-transform: capitalize;
+      text-align: left;
+     }
+         
+
+
+
+
+  
+
+     
+
+:root {
+  --primary-color: black;
+}
+
+
+body {
+  background-color: white;
+  font-family: 'Trebuchet MS';
+}
+
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  background-color: rgba(233, 63, 1, 0.972);
+  box-shadow: 0 .2em .5em 0 rgb(0, 0, 0);
+  width: 100%;
+  height:3.8em;
+  margin-left: 0;
+  z-index: 998;
+}
+
+.navbar .navbar-logo {
+  margin-left: -.5em;
+ font-weight: 600;
+  color: rgba(0, 0, 0, 0.827);
+  text-decoration: none;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+  font-size: 22px;
+  margin-top: .2em;
+}
+
+.navbar .navbar-logo span {
+  color: white;
+  font-weight: bold;
+}
+
+
+ .menu-btn {
+  width: 2.3em;
+  float: right;
+  margin-right: -.3em;
+  margin-top: -0.20em;
+  cursor: pointer;
+}
+
+
+nav {
+  position: fixed;
+  z-index: 989;
+  width: 100%;
+  right: 0;
+  top:0;
+  background-color: rgba(255, 255, 255, 0.972);
+  height: 17em;
+  padding: 1em;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform .5s ease-in-out;
+  transition: -webkit-transform .5s ease-in-out;
+  transition: transform .5s ease-in-out;
+  transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+}
+
+nav .exit-btn {
+  margin-top: .25em;
+  width: 1.15em;
+  height: 1.2em;
+  cursor: pointer;
+  float: right;
+  margin-right:-.2em;
+  margin-bottom: .5em;
+}
+
+nav .navbar-menu {
+  margin-top: 2.9em;
+  text-align: center;
+  font-weight: bold;
+  margin-right: 1em;
+}
+
+nav .navbar-menu li {
+  color: black;
+  list-style-type: none;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  font-family: 'Comfortaa';
+  text-align: left;
+  margin-left: -1.75em;
+  font-weight: bold;
+  margin-top: 1.3em;
+  font-size: 1.25em;
+  border-bottom: 1px solid black;
+}
+
+nav .navbar-menu a {
+  color: black;
+  text-decoration: none;
+}
+
+nav .navbar-menu a:hover {
+  text-decoration: 2px black underline;
+}
+
+
+
+ nav.open-nav{
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+
+@media only screen and (min-width: 640px) {
+  .menu-btn, .exit-btn {
+    display: none;
+  }
+  .navbar {
+    position:-webkit-sticky;
+    background-image: none;
+    background-color: rgba(0, 0, 0, 0.945);
+    box-shadow: 0 .1rem .5rem 0 black;
+  }
+  .navbar .navbar-logo span {
+    color: rgba(255, 68, 0, 0.952); 
+  }
+  .navbar .navbar-logo  {
+    color: rgba(255, 255, 255, 0.972);
+    margin-top: .2em;
+    font-size: 22px;
+  }
+  .navbar-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: unset;
+  }
+  nav {
+    background: none;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 430px auto;
+        grid-template-columns: 400px auto;
+    position: unset;
+    height: auto;
+    width: 70%;
+    padding: .5em;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  nav ul.navbar-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    float: right;
+    margin-top: -1.3em;
+    position: absolute;
+    right: -5.5em;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  nav ul.navbar-menu li {
+   color: white;
+    font-weight: bolder;
+    font-size: 1.15em;
+    float: right;
+    font-family:'Trebuchet MS';
+    margin-right: 5.5em;
+    margin-top: .8em;
+    text-decoration: 2px rgba(0, 255, 174, 0.605) underline;
+  }
+  nav ul.navbar-menu li:hover {
+    color: cyan;
+  }
+
+ 
+  nav ul.navbar-menu a {
+    text-decoration: none;
+    color: white;
+    text-decoration: 2px orangered underline;
+  }
+  
+nav .navbar-menu a:hover {
+  color: cyan;
+  text-decoration: 2px cyan underline;
+}
+  .locationLogo{
+   display: none;
+  }
+}
+@media only screen and (min-width: 589px) {
+  .cards{ 
+      display: grid;
+        grid-template-columns:330px  auto;
+    }
+    .item-card-part1{
+      width: 20em;
+     }
+  }
+@media only screen and (min-width: 857px) {
+.cards{ 
+    display: grid;
+      grid-template-columns:330px 330px auto;
+  }
+  .item-card-part1{
+    width: 20em;
+    margin-left: .9em;
+   }
+}
+@media only screen and (min-width: 1115px) {
+    .cards{ 
+        display: grid;
+          grid-template-columns:280px 280px 280px auto;
+      }
+    }
+    @media only screen and (min-width: 1383px) {
+        .cards{ 
+            display: grid;
+              grid-template-columns:280px 280px 280px 280px auto;
+          }
+        }
+
+
+        @media only screen and (min-width: 363px) {
+          .logoss{
+            display: grid;
+            grid-template-columns: 81px 81px 81px 81px 81px ;
+            
+            }
+          } 
+          @media only screen and (min-width: 390px) {
+            .logoss{
+              display: grid;
+              grid-template-columns: 91px 91px 91px 91px 91px ;
+              
+              }
+            } 
+            @media only screen and (min-width: 407px) {
+              .logoss{
+                display: grid;
+                grid-template-columns: 93px 93px 93px 93px 93px ;
+                
+                }
+              } 
+  @media only screen and (min-width: 430px) {
+                
+
+.locationLogo{
+  display: none;
+ 
+ }
+ 
+ .clothLogo{
+  display: none;
+ }
+ 
+ .laptopSell{
+  display: none;
+ }
+ 
+ .phoneSell{
+ display: none;
+ }
+ 
+ .dressLogo{
+  display: none;
+ }
+ .carLogo{
+  display: none;
+ }
+ .phoneLogo{
+  display: none;
+ }
+ .houseLogo{
+  display: none;
+ }
+ .laptopLogo{
+  display: none;
+ }
+     
+}
+
+ 

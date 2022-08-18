@@ -1,0 +1,200 @@
+
+<body>
+    <link rel="stylesheet" href="project.css">
+    <div class="navbar">
+        <div class="navbar-container">
+            <h2  class="navbar-logo"  id="logo">CAMER<span>SITE</span> </h2> 
+           <img class="menu-logo" id="menuCta"   src="https://www.svgrepo.com/show/65828/menu-bars.svg" alt="menu">
+           <nav>
+               <img  class="exit-btn" id="exitCta" src="https://img.icons8.com/ios-glyphs/344/cancel.png"    alt="exit menu">
+           <ul class="navbar-menu">
+               <li><a href="../app/marketing.html">Marketing</a></li>
+               <li><a href="../app/worker.html">Workers</a></li>
+               <li><a href="../app/project.html">Projects</a></li>
+           </ul>
+           </nav>
+        </div>
+    </div>
+    <br>
+     <br>
+     
+     <section class="projects">
+      <div class="container">
+          <h3>EVENTS</h3> <img class="eve"  src="https://cdn-icons.flaticon.com/png/128/2402/premium/2402478.png?token=exp=1645562461~hmac=474bdd44c8c94631cbcf8bc2b115aa7b" alt="">
+      <P>  Here you can find interesting open for all public events with contacts inorder to get more infos.
+           <span> You also have the possibility to post your own event and let everyone know everybody can participate.</span><P>
+      </div>
+      <hr>
+      <form action="">
+        <input type="search" (ngModelChange)="searchProject(key.value)" #key="ngModel" ngModel  name="key" id="searchName" class="nameSearch" placeholder=" find by description..."><img class="searchIcon" src="https://t3.ftcdn.net/jpg/00/83/10/90/240_F_83109078_BOS0Wxe3v1slxIprmr3VK6HDBBrnsArt.jpg" alt="">
+      </form>
+      <div *ngIf="eventsArray?.length==0" class="noProjects">
+        <div class="alerter" role="alert">
+          <h4>No Event with that description found!!!</h4>
+      </div>
+    </div>
+    <section class="event-cards">
+      <div *ngFor="let event of eventsArray" class="project-container1">
+        <div class="project-row">
+          <div class="project-column1">
+            <div class="project-card-part1">
+              <div class="project-card-body-row">
+                <div class="item-card-body-column1">
+                  <img class="event-rounded-image"  src="{{event?.eventImageUrl}}" alt="">
+                </div>
+              </div>
+              <ul class="project-attributes">
+                <li class="pro-attributes"><i></i>Description: <span class="spannnn">{{event?.eventDescription}}</span></li>
+              </ul>
+              <div class="card-bottom-project">
+                <div class="project-buttons">
+                  <a class="delete-button"  id="deleteProject" data-placement="top" role="dialog" data-original-title="Delete" href=""><img class="deleteProjectLogo"  src="https://cdn-icons.flaticon.com/png/128/2874/premium/2874821.png?token=exp=1645053710~hmac=6195b8522a7fed6455eceac326bce203" alt=""></a>
+                    <a class="edit-button" id="editProject"  data-placement="top" role="dialog" data-original-title="Edit" href=""><img class="editProjectLogo" src="https://cdn-icons-png.flaticon.com/128/1001/1001371.png" alt=""></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+  </section>
+  <hr>
+  <section class="project">
+      <div class="container">
+          <h3 class="share">POST AN EVENT</h3>
+          <form #projectForm="ngForm" (ngSubmit)="onPostProject(projectForm)">
+            <label for="eventImageUrl"> Flyer : (<span>prospectus</span>)</label>
+            <input  type="text" id="eventImageUrl" ngModel name="eventImageUrl" >
+            <label for="eventDescription"> Event Description : (<span>description</span>)</label>
+            <textarea    class="textt"  ngModel name="eventDescription" id="eventDescription"  placeholder="type of party/security?/exact location..." rows="7" cols="30"
+             style=" box-shadow: 0 0 .4rem 0 black;"></textarea>
+             <label for="eventPassword"> Password : (<span>for deleting or editing</span>)</label>
+             <input  type="text" id="eventPassword" ngModel name="eventPassword" >
+             <div class="postBtn">
+              <button [disabled]="projectForm.invalid" type="submit"  class="submit-projectcomment" >post</button>
+              <button class="submit-projectcomment" type="reset" >reset</button>
+          </div>
+        </form>
+          </div>
+          <div class="map-right">
+            <h3>Find <span>zone</span> :  (trouver <span> l'endroit</span>)</h3> 
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15923.380644645886!2d11.499670056554136!3d3.84339644704202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x108bcf7a309a7977%3A0x7f54bad35e693c51!2sJaunde%2C%20Kamerun!5e0!3m2!1sde!2sde!4v1644882446916!5m2!1sde!2sde"   width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+  </section>
+  <form #postProductForm="ngForm" (ngSubmit)="onPostProduct(postProductForm)" method="post" enctype="multipart/form-data" >
+    <label for="productCategory"> Category <span>:</span></label>
+    <input type="text" id="productCategory" ngModel name="category" placeholder="like Car/Television/Clothes..." required>
+    <label for="price"> Price <span>:</span> </label>
+    <input type="number" id="price" ngModel name="price" placeholder=" enter price " required>
+    <label for="productLocation"> Product location <span>:</span> </label>
+    <input type="text" id="productLocation" ngModel name="location" placeholder=" product location..." required>
+    <label for="contact"> Tel <span>:</span></label>
+    <input type="tel" id="contact" ngModel name="contact" required>
+    <label for="productDescription"> Product description <span> :</span></label>
+    <textarea   ngModel name="description" id="productDescription"  placeholder="product description..." rows="3" cols="27"
+     style=" box-shadow: 0 .1rem .4rem 0 black;" maxlength="120"></textarea>
+    <label class="chooseImage" for="file">
+      <i class="material-icons">add_photo_alternate</i>&nbsp;1</label>
+    <input class="form-control" type="file" id="file" ngModel name="mainImage" accept="image/*">
+    <img  alt="imageChoosen" id="displayImage" class="item-rounded-image">
+    <label class="chooseImage" for="file2">
+      <i class="material-icons">add_photo_alternate</i>&nbsp;2</label>
+    <input  type="file" id="file2" ngModel name="extras" accept="image/*">
+    <img  alt="imageChoosen" id="displayImage2" class="item-rounded-image">
+    <label class="chooseImage" for="file3">
+      <i class="material-icons">add_photo_alternate</i>&nbsp;3</label>
+    <input  type="file" id="file3" ngModel name="extras" accept="image/*" >
+    <img  alt="imageChoosen" id="displayImage3" class="item-rounded-image">
+    <label class="chooseImage" for="file4">
+      <i class="material-icons">add_photo_alternate</i>&nbsp;4</label>
+    <input  type="file" id="file4" ngModel name="extras" accept="image/*" >
+    <img  alt="imageChoosen" id="displayImage4" class="item-rounded-image">
+    <label class="chooseImage" for="file5">
+      <i class="material-icons">add_photo_alternate</i>&nbsp;5</label>
+    <input  type="file" id="file5" ngModel name="extras" accept="image/*" >
+    <img  alt="imageChoosen" id="displayImage5" class="item-rounded-image">
+    <label for="password"> Password  :<span>(for deleting or editing)</span></label>
+    <input  type="number" id="productPassword" ngModel name="productPassword" required>
+    <div class="postBtn">
+      <button [disabled]="postProductForm.invalid" type="submit" class="submit-itemcomment" >post</button>
+      <button class="submit-itemcomment" type="reset" >reset</button>
+    </div>
+  </form>
+</div>
+</div>
+</div>
+
+
+<div  class="modal fade" id="updateProduct" tabindex="-1" role="dialog " aria-labelledby="updateProduct" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="mark">
+  <h2>Edit  Product</h2>
+  <button type="button" class="close" data-dismiss="modal" aria-label="close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <form #editProductForm="ngForm">
+    <label for="productCategory">Category:<span></span></label>
+    <input type="text" id="productCategory" ngModel="{{editProduct?.productCategory}}" name="productCategory">
+    <label for="price"> Price<span>:</span></label>
+    <input type="number" id="price" ngModel="{{editProduct?.productPrice}}" name="productPrice" >
+    <input type="hidden" id="id" ngModel="{{editProduct?.id}}" name="id">
+    <input type="hidden" id="ipAddress" ngModel="{{editProduct?.ipAddress}}" name="ipAddress" >
+    <label for="productLocation"> Product location<span>:</span></label>
+    <input type="text" id="productLocation" ngModel="{{editProduct?.productLocation}}" name="productLocation">
+    <label for="contact">Tel<span>:</span></label>
+    <input type="tel" id="contact" ngModel="{{editProduct?.contact}}" name="contact">
+    <label for="productDescription">Product description<span>:</span></label>
+    <textarea  ngModel="{{editProduct?.productDescription}}" name="productDescription" id="productDescription" placeholder="product description..." rows="3" cols="27"
+    style=" box-shadow: 0 .1rem .4rem 0 black;" maxlength="120"></textarea>
+    <label class="chooseImage" for="file">
+      <i class="material-icons">add_photo_alternate</i>&nbsp;1</label>
+    <input  type="file" id="file" ngModel="{{editProduct?.imageUrl}}" name="mainImage" accept="image/*" >
+    <img class="item-rounded-image" src=""  alt="imageChoosen" id="displayImage">
+    <label class="chooseImage" for="file">
+      <i class="material-icons">add_photo_alternate</i>&nbsp;2</label>
+    <input  type="file" id="file" ngModel="{{editProduct?.imageUrl}}" name="extras" accept="image/*" >
+    <img src="" alt="imageChoosen" id="displayImage">
+    <label class="chooseImage" for="file">
+      <i class="material-icons">add_photo_alternate</i>&nbsp;3</label>
+    <input  type="file" id="file" ngModel="{{editProduct?.imageUrl}}" name="extras" accept="image/*" >
+    <img src="" alt="imageChoosen" id="displayImage">
+    <label class="chooseImage" for="file">
+      <i class="material-icons">add_photo_alternate</i>&nbsp;4</label>
+    <input  type="file" id="file" ngModel="{{editProduct?.imageUrl}}" name="extras" accept="image/*" >
+    <img src="" alt="imageChoosen" id="displayImage">
+    <label class="chooseImage" for="file">
+      <i class="material-icons">add_photo_alternate</i>&nbsp;5</label>
+    <input  type="file" id="file" ngModel="{{editProduct?.imageUrl}}" name="extras" accept="image/*" >
+    <img src=""  alt="imageChoosen" id="displayImage">
+    <button class="carousel-control-prev" data-bs-target="#carouselExampleInterval" role="button" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </button>
+    <button class="carousel-control-next" data-bs-target="#carouselExampleInterval" role="button" data-bs-slide="next">
+      <span style="background-color: black;"  class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </button>
+    <label for="productPassword">Password<span>:</span></label>
+    <input  type="number" id="productPassword" ngModel="{{editProduct?.productPassword}}" name="productPassword" >
+    <div class="postBtn">
+    <button [disabled]="editProductForm.invalid" (click)="onEditProduct(editProductForm.value)" type="submit" class="submit-itemcomment" >Edit</button>
+    <button class="submit-itemcomment" type="reset" >Clear</button>
+  </div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHK7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.js"></script>
+
+<div class="item-card-body-row">
+  <div class="item-card-body-column1">
